@@ -182,10 +182,10 @@ header {
 .menu {
   display: inline-block;
   margin-left: 0px;
-  position: relative;
-  top: 15px;
+  margin-top: 20px;
   font-size: 30px;
   padding: 0.5em 1.5em 0.5em 1.5em;
+  overflow: auto;
 }
 .menucont {
   display: flex;
@@ -199,6 +199,7 @@ header {
   padding-top: 1px;
   margin-left: -2px;
   position: sticky;
+  overflow:auto;
 }
 
 li {
@@ -258,11 +259,11 @@ img {
   margin-top: 10vh;
   height: 100px;
   position: relative;
-  bottom: 285px;
+  bottom: 290px;
   min-height: 60px;
   min-width: 65px;
   margin-left: 5vw;
-  display: inline-block;
+  display: block;
 }
 video {
   position: relative;
@@ -278,9 +279,11 @@ video {
   position: relative;
   bottom: 15vh;
   display: flex;
+  
 }
 #Environmentalcond {
   width: 55vw;
+  
   margin-top: 20px;
   /* 	border: 1px solid black; */
   margin-left: 20px;
@@ -298,7 +301,7 @@ video {
 }
 .growcycletitle {
   margin-bottom: 10px;
-  padding-bottom: 2px;
+  padding-bottom: 5px;
   border-bottom: 1px solid black;
 }
 h2 {
@@ -308,7 +311,6 @@ h2 {
 }
 .env {
   display: flex;
-  border-top: 1px solid black;
   padding: 10px;
   width: 600px;
   margin-left: auto;
@@ -341,7 +343,9 @@ h2 {
   padding: 4px;
   width: 30vw;
   border-radius: 20px;
+  
 }
+
 label {
   display: block;
   margin-top: 8px;
@@ -364,8 +368,8 @@ label {
 }
 input {
   display: inline-block;
-  height: 7vh;
-  width: 6vw;
+  height: 3vh;
+  width: 8vw;
   margin-left: 7px;
 }
 .lighttitle {
@@ -373,32 +377,36 @@ input {
   text-align: center;
 }
 input {
-  background-color:#001d3d;
+  background-color:#1e6091;
   color: white;
   border: none;
   text-align: center;
-  font-size: 3em;
+  font-size: 1.5em;
+}
+input:hover {
+  background-color: #a8c686;
+  transition: 0.2s;
+  border-radius: 1em;
 }
 h1,
 h2,
 nav {
   font-family: "dosisextralight", times;
-  font-size: 3em;
+  font-size: 2em;
 }
 label,
 p,
 span {
   font-family: "signikaregular", times;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 #lupdate {
-  font-size: 0.7em;
+  font-size: 1em;
   text-align: center;
 }
 #runningcyclecont {
   display: flex;
   justify-content: space-around;
-  margin-top: -15px;
 }
 .button-rcycle {
   float: right;
@@ -493,7 +501,7 @@ td:hover {
   border-radius: 10px;
   opacity: 0;
 }
-.calendar:hover > div {
+.calendar thead tr td:hover > div {
   opacity: 1;
 }
 #schm-title {
