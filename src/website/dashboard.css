@@ -1,122 +1,172 @@
-
 /*RESET*/
 
-	
 /* 	*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
- */	
-	html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-	body{line-height:1}
-body{
-/* 	background-color:#FFFFEB; */
-background-color:#FFFAFF;
-		/* background-color: rgb(250, 250, 250); */
-		/* background-color:#DFE2DB; */
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-	width: 100vw;
+ */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+body {
+  /* 	background-color:#FFFFEB; */
+  background-color: #fffaff;
+  /* background-color: rgb(250, 250, 250); */
+  /* background-color:#DFE2DB; */
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  width: 100vw;
 }
 
-html{
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+html {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 /*FONTS*/
-	@font-face {
-	    font-family: 'montserratsemibold';
-	    src: url('fonts/montserrat-semibold-webfont.woff2') format('woff2'),
-	         url('fonts/montserrat-semibold-webfont.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
-
-	}
-	@font-face {
-	    font-family: 'dosisextralight';
-	    src: url('fonts/dosis-variablefont_wght-webfont.woff2') format('woff2'),
-	         url('fonts/dosis-variablefont_wght-webfont.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
-
-	}
-
-
-
-
-	@font-face {
-	    font-family: 'ubuntumedium';
-	    src: url('fonts/ubuntu-medium-webfont.woff2') format('woff2'),
-	         url('fonts/ubuntu-medium-webfont.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
-
-	}
-
-
-
-
-	@font-face {
-	    font-family: 'ubuntubold';
-	    src: url('fonts/ubuntu-bold-webfont.woff2') format('woff2'),
-	         url('fonts/ubuntu-bold-webfont.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
-
-	}
-
-
-
-
-	@font-face {
-	    font-family: 'overlockblack';
-	    src: url('fonts/overlock-black-webfont.woff2') format('woff2'),
-	         url('fonts/overlock-black-webfont.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
-
-	}
-
-
-
-
-	@font-face {
-	    font-family: 'patrick_handregular';
-	    src: url('fonts/patrickhand-regular-webfont.woff2') format('woff2'),
-	         url('fonts/patrickhand-regular-webfont.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
-
-	}
-
-
-
-
-	@font-face {
-	    font-family: 'signikaregular';
-	    src: url('fonts/signika-regular-webfont.woff2') format('woff2'),
-	         url('fonts/signika-regular-webfont.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
-
-	}
-
-
-
-
-	@font-face {
-	    font-family: 'eb_garamondregular';
-	    src: url('fonts/ebgaramond-variablefont_wght-webfont.woff2') format('woff2'),
-	         url('fonts/ebgaramond-variablefont_wght-webfont.woff') format('woff');
-	    font-weight: normal;
-	    font-style: normal;
+@font-face {
+  font-family: "montserratsemibold";
+  src: url("fonts/montserrat-semibold-webfont.woff2") format("woff2"),
+    url("fonts/montserrat-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dosisextralight";
+  src: url("fonts/dosis-variablefont_wght-webfont.woff2") format("woff2"),
+    url("fonts/dosis-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "ubuntumedium";
+  src: url("fonts/ubuntu-medium-webfont.woff2") format("woff2"),
+    url("fonts/ubuntu-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-header{
-	margin: 0px 0px 0px 0px;
-	padding: 1px 0px 1px 0px;
-	
-	/* display: -webkit-box; */
-	
-	/* display: -webkit-flex;
+@font-face {
+  font-family: "ubuntubold";
+  src: url("fonts/ubuntu-bold-webfont.woff2") format("woff2"),
+    url("fonts/ubuntu-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "overlockblack";
+  src: url("fonts/overlock-black-webfont.woff2") format("woff2"),
+    url("fonts/overlock-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "patrick_handregular";
+  src: url("fonts/patrickhand-regular-webfont.woff2") format("woff2"),
+    url("fonts/patrickhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "signikaregular";
+  src: url("fonts/signika-regular-webfont.woff2") format("woff2"),
+    url("fonts/signika-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "eb_garamondregular";
+  src: url("fonts/ebgaramond-variablefont_wght-webfont.woff2") format("woff2"),
+    url("fonts/ebgaramond-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  margin: 0px 0px 0px 0px;
+  padding: 1px 0px 1px 0px;
+
+  /* display: -webkit-box; */
+
+  /* display: -webkit-flex;
 	
 	display: -ms-flexbox;
 	
@@ -126,56 +176,45 @@ header{
 	-webkit-flex-direction: row;
 	    -ms-flex-direction: row;
 	        flex-direction: row; */
-	height: 12vh;
-	max-width: 100%;
+  height: 12vh;
+  max-width: 100%;
 }
-.menu{
-	display: inline-block;
-	margin-left: 0px;
-	position: relative;
-	top: 15px;
-	font-size: 30px;
-	padding: 0.5em 1.5em 0.5em 1.5em;
-
+.menu {
+  display: inline-block;
+  margin-left: 0px;
+  position: relative;
+  top: 15px;
+  font-size: 30px;
+  padding: 0.5em 1.5em 0.5em 1.5em;
 }
-.menucont{
-	display: flex;
-	justify-content: space-around;
-	background-color: #e7c6ff/*rgb(131, 199, 111)*/;
-	text-align: center;
-	width: 100vw;
-	height: 8vh;
-	border-radius: 0px 0px 8px;
-	padding: 10px;
-	padding-top: 1px;
-	margin-left: -2px;
-	position: sticky;
-	
-
+.menucont {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e7c6ff /*rgb(131, 199, 111)*/;
+  text-align: center;
+  width: 100vw;
+  height: 8vh;
+  border-radius: 0px 0px 8px;
+  padding: 10px;
+  padding-top: 1px;
+  margin-left: -2px;
+  position: sticky;
 }
-	
-li{
-	border: 2px  white;	
-	border-style: solid;
-	font-size: 1.4em;
-	padding: 5px;
-	margin-left: 2em;
-	margin-right: 2em;
-	border-radius: 10px;
 
-
-
-	
-
-	
-
-
+li {
+  border: 2px white;
+  border-style: solid;
+  font-size: 1.4em;
+  padding: 5px;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 10px;
 }
-a:hover{
-color: black;
+a:hover {
+  color: black;
 }
-li:hover{
-	border-color: black;
+li:hover {
+  border-color: black;
 }
 /* li:first-child{
 	border-left-style: solid;
@@ -195,277 +234,276 @@ li:last-child:hover{
 	border-right-style: none;
 	border-top-right-radius: 0px;
 } */
-a{
-	color: white;
-	margin-left: 0px;
-	text-decoration: none;
+a {
+  color: white;
+  margin-left: 0px;
+  text-decoration: none;
 }
 /*header*/
-h1{
-	margin-top: -20px;
-	margin-bottom: 5px;
-	text-align: center;
-	font-size: 2.5em;
-	font-weight: bold;
-	
+h1 {
+  margin-top: -20px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
 }
-#visualelements{
-	height: 40vh;
-	display: flex;
-	flex-direction: row;
-
-	padding: 0px;
-	border-top: 1px solid black;
+#visualelements {
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
 }
-img{
-	width: 11vw;
-	margin-top: 10vh;
-	height:20vh;
-	min-height:60px;
-	min-width: 65px;
-	margin-left: 10vw;
-	display: inline-block;
+img {
+  width: 100px;
+  margin-top: 10vh;
+  height: 100px;
+  position: relative;
+  bottom: 285px;
+  min-height: 60px;
+  min-width: 65px;
+  margin-left: 5vw;
+  display: inline-block;
 }
-video{
-	display: inline-block;
-	margin-left: auto;
-	margin-right: 50px;
-	margin-top: 2px;
-	border-radius: 15px;
-	overflow: hidden ;
+video {
+  position: relative;
+  bottom: 100px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 2px;
+  border-radius: 15px;
+  overflow: hidden;
 }
-#infos{
-display: flex;
+#infos {
+  position: relative;
+  bottom: 15vh;
+  display: flex;
 }
-#Environmentalcond{
-	width: 55vw;
-	margin-top: 20px;
-/* 	border: 1px solid black; */
-	margin-left: 20px;
-	margin-bottom: 10px;
-	
+#Environmentalcond {
+  width: 55vw;
+  margin-top: 20px;
+  /* 	border: 1px solid black; */
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
-#runningcycle{
-	margin-top: 18px;
-	margin-left: 2vw;
-	margin-right: 2vw;
-	width: 40vw;
-/* 	border: 1px solid black; */
-	border-radius: 10px;
-	height: 38vh;
-	padding: 2px 2vw;
-
+#runningcycle {
+  margin-top: 18px;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  width: 40vw;
+  /* 	border: 1px solid black; */
+  border-radius: 10px;
+  height: 38vh;
+  padding: 2px 2vw;
 }
-.growcycletitle{
-	margin-bottom: 10px;
-	padding-bottom: 2px;
- 	border-bottom: 1px solid black;
-} 
-h2{
-	text-align: center;
-	font-size: 1.7em;
-	display: block;
+.growcycletitle {
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid black;
 }
-.env{
-	display: flex;
-	border-top: 1px solid black;
-	padding: 10px;
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-
-
+h2 {
+  text-align: center;
+  font-size: 1.7em;
+  display: block;
 }
-#Sensorsval{
-	float: left;
-	border: 1px ;
-	background-color: /* #D6EFFF */ #EBF7FF;
-
-
+.env {
+  display: flex;
+  border-top: 1px solid black;
+  padding: 10px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
-#temperature,#Humidity,#light1,#light2,#wind{
-	/* Firefox */
--webkit-appearance: none;
+#Sensorsval {
+  float: left;
+  border: 1px;
+  background-color: /* #D6EFFF */ #ebf7ff;
+}
+#temperature,
+#Humidity,
+#light1,
+#light2,
+#wind {
+  /* Firefox */
+  -webkit-appearance: none;
   -moz-appearance: textfield;
 
-	pointer-events: none;
+  pointer-events: none;
 }
-#userval{
-
-/* 	float: right; */
-margin-left: 19px;
-	border: 1px ;
-	background-color: #dda15e;
+#userval {
+  /* 	float: right; */
+  margin-left: 19px;
+  border: 1px;
+  background-color: #dda15e;
 }
-#Sensorsval,#userval{
-	padding: 4px;
-	width: 30vw;
-	border-radius: 20px;
+#Sensorsval,
+#userval {
+  padding: 4px;
+  width: 30vw;
+  border-radius: 20px;
 }
-label{
-	display: block;
-	margin-top: 8px;
-	margin-bottom: 4px;
-	margin-left: 7px;
-
+label {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  margin-left: 7px;
 }
-#tempulabel{
-	margin-top: 24px;
-/* 		border: 1px solid black;
- */}
- .tiltes{
- 	text-align: center;
- 	margin-top:  8px;
- 	font-family: 'montserratsemibold';
- 
- }
- .lightss{
- 	display: flex;
- 	padding: 10px;
- }
- input{
- 	display: inline-block;
- 	height: 7vh;
- 	width: 6vw;
- 	margin-left: 7px;
-
- }
- .lighttitle{
- 	margin-top:  8px;
- 	text-align: center;
-
- }
- input{
- 	background-color: black;
- 	color: white;
- 	border: none;
- 	text-align: center;
- 	font-size: 1.2em;
-
- }
- h1,h2,nav,input{
-font-family: 'dosisextralight', times;
- }
- label,p,span{
- 	font-family: 'signikaregular',times;
- }
- #lupdate{
- 	font-size: 0.70em;
- 	text-align: center;
- }
- #runningcyclecont{
- 	display:flex;
- 	justify-content:space-around;
- 	margin-top: -15px;
- }
- .button-rcycle{
-float: right;
-border: 1px solid black;
-border-radius: 0.2em /* 0.6em; */;
-padding: 7px;
-display:block;
-margin-top: 2vh;
-background-color:#A8C686;
- }
- .button-r::after{
-content: '»';
+#tempulabel {
+  margin-top: 24px;
+  /* 		border: 1px solid black;
+ */
+}
+.tiltes {
+  text-align: center;
+  margin-top: 8px;
+  font-family: "montserratsemibold";
+}
+.lightss {
+  display: flex;
+  padding: 10px;
+}
+input {
+  display: inline-block;
+  height: 7vh;
+  width: 6vw;
+  margin-left: 7px;
+}
+.lighttitle {
+  margin-top: 8px;
+  text-align: center;
+}
+input {
+  background-color:#001d3d;
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: 3em;
+}
+h1,
+h2,
+nav {
+  font-family: "dosisextralight", times;
+  font-size: 3em;
+}
+label,
+p,
+span {
+  font-family: "signikaregular", times;
+  font-size: 1.4em;
+}
+#lupdate {
+  font-size: 0.7em;
+  text-align: center;
+}
+#runningcyclecont {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -15px;
+}
+.button-rcycle {
+  float: right;
+  border: 1px solid black;
+  border-radius: 0.2em /* 0.6em; */;
+  padding: 7px;
+  display: block;
+  margin-top: 2vh;
+  background-color: #a8c686;
+}
+.button-r::after {
+  content: "»";
   /* position: absolute; */
-  opacity: 0;  
+  opacity: 0;
   top: 14px;
   right: -20px;
   transition: 0.2s;
- }
- .button-rcycle:hover{
- 	border-radius:  0.2em 0.6em;
- 	  transition: 0.2s;
- }
- .button-r:hover::after{
- 	opacity: 1;
- 	right: 10px;
- 	
- }
- .fa-refresh:hover,.fa-pencil:hover{
- 	color: green;
- 	transition: 0.2s;
- }
- #cycleinf{
- 	border: 1px;
- 	background-color:#EBF7FF
- }
- #schemeinf{
- 	margin-left: 10px;
- 	background-color: #EBECED;
- }
- #cycleinf,#schemeinf{
- 	padding: 7px;
- 	border: 1px solid #EBF7FF;
- 	border-radius: 10px;
- }
- .title{
- 	font-weight: 500;
- }
-#lefthands{
-	display: flex;
-	flex-direction: column;
-	align-content: center;
+}
+.button-rcycle:hover {
+  border-radius: 0.2em 0.6em;
+  transition: 0.2s;
+}
+.button-r:hover::after {
+  opacity: 1;
+  right: 10px;
+}
+.fa-refresh:hover,
+.fa-pencil:hover {
+  color: green;
+  transition: 0.2s;
+}
+#cycleinf {
+  border: 1px;
+  background-color: #ebf7ff;
+}
+#schemeinf {
+  margin-left: 10px;
+  background-color: #ebeced;
+}
+#cycleinf,
+#schemeinf {
+  padding: 7px;
+  border: 1px solid #ebf7ff;
+  border-radius: 10px;
+}
+.title {
+  font-weight: 500;
+}
+#lefthands {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
-table{
-	margin-left: 2vw;
-	border-collapse:collapse;
-	border-spacing: 10px;
-	margin-bottom: 10px;
-	margin-top: -10px;
+table {
+  margin-left: 2vw;
+  border-collapse: collapse;
+  border-spacing: 10px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+.tablet {
+  margin: auto;
+}
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid;
+}
+.scheduled {
+  text-decoration: underline red;
+}
 
+td:hover {
+  background-color: green;
+  text-align: center;
+  border: 1px solid black;
+  color: white;
+  transition: 0.1s;
 }
-.tablet{
-	margin: auto;
+.calendar {
+  display: flex;
 }
-td{
-	text-align: center;
-	padding: 10px;
-	border: 1px solid;
+.calendar > div {
+  margin-left: 1vw;
+  align-self: center;
+  background-color: #ecf39e;
+  width: 40%;
+  height: 29vh;
+  min-height: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0;
 }
-.scheduled{
-	text-decoration: underline red;
+.calendar:hover > div {
+  opacity: 1;
 }
-
-
-td:hover{
-background-color: green;
-text-align: center;
-border: 1px solid black;
-color: white;
-transition: 0.1s;
+#schm-title {
+  text-align: center;
+  font-weight: 500;
 }
-.calendar{
- display: flex;
-
+#executionschedule {
+  width: 42vw;
+  margin-left: 3vw;
 }
-.calendar>div{
-	margin-left: 1vw;
-	align-self: center;
-	background-color: #ecf39e;
-	width: 40%;
-	height: 29vh;
-	min-height: 150px;
-	padding: 10px;
-	border-radius: 10px;
-	opacity: 0;
-	
-}
-.calendar:hover>div{
-	opacity: 1;
-}
-#schm-title{
-	text-align: center;
-	font-weight: 500;
-}
-#executionschedule{
-	width: 42vw;
-	margin-left: 3vw;
-
-}
-.grw{
-	margin-bottom: 4vh;
+.grw {
+  margin-bottom: 4vh;
 }
