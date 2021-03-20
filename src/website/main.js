@@ -11,6 +11,13 @@ const windu = document.getElementById("windu")
 const light1u = document.getElementById("light1u");
 const light2u = document.getElementById("light2u");
 const userRefresher = document.getElementById("userRefresher");
+const caption = document.getElementById("caption");
+const d = new Date();
+const date = d.toString().split(' ');
+const currentDay = date[2];
+document.getElementById(currentDay).style.backgroundColor = "#edf2fb";
+
+caption.innerText = `${date[1]}  ${date[3]}`;
 sensorRefresher.addEventListener("click", () => {
   temperature.value = jsonData.temperature;
   humidity.value = jsonData.humidity;
@@ -73,6 +80,7 @@ const executeDisplay = () => {
     lastUpdate.innerText = new Date();
   });
 };
+
 
 const jsonData = {
   temperature: "50",

@@ -310,6 +310,7 @@ h2 {
   display: block;
 }
 .env {
+  border-top: 1px solid black;
   display: flex;
   padding: 10px;
   width: 600px;
@@ -490,7 +491,7 @@ td:hover {
 .calendar {
   display: flex;
 }
-.calendar > div {
+#growCycle {
   margin-left: 1vw;
   align-self: center;
   background-color: #ecf39e;
@@ -501,7 +502,7 @@ td:hover {
   border-radius: 10px;
   opacity: 0;
 }
-.calendar thead tr td:hover > div {
+ .calendar:hover  > #growCycle {
   opacity: 1;
 }
 #schm-title {
