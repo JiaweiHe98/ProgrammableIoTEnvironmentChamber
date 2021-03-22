@@ -15,7 +15,7 @@ const caption = document.getElementById("caption");
 const d = new Date();
 const date = d.toString().split(' ');
 const currentDay = date[2];
-document.getElementById(currentDay).style.backgroundColor = "#edf2fb";
+document.getElementById(currentDay).style.backgroundColor = "#98c1d9";
 
 caption.innerText = `${date[1]}  ${date[3]}`;
 sensorRefresher.addEventListener("click", () => {

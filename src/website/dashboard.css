@@ -185,12 +185,11 @@ header {
   margin-top: 20px;
   font-size: 30px;
   padding: 0.5em 1.5em 0.5em 1.5em;
-  overflow: auto;
 }
 .menucont {
   display: flex;
-  justify-content: space-around;
-  background-color: #e7c6ff /*rgb(131, 199, 111)*/;
+  justify-content: center;
+  background-color: #6c757d /*rgb(131, 199, 111)*/;
   text-align: center;
   width: 100vw;
   height: 8vh;
@@ -201,6 +200,7 @@ header {
   position: sticky;
   overflow:auto;
 }
+
 
 li {
   border: 2px white;
@@ -256,28 +256,32 @@ h1 {
 }
 img {
   width: 100px;
-  margin-top: 10vh;
+  display: inline-block;
   height: 100px;
-  position: relative;
-  bottom: 230px;
   min-height: 60px;
   min-width: 65px;
-  margin-left: 5vw;
-  display: block;
+
+
 }
+
+#videoblock {
+  text-align: center;
+  border-top: 1px solid black;
+  margin-top: 2.5%;
+
+ 
+}
+
 video {
-  position: relative;
-  bottom: 100px;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: 50px;
-  margin-top: 2px;
-  border-radius: 15px;
-  overflow: hidden;
+  margin-top: 2%;
+  height: 60%;
+  width: 60%;
+
 }
+
+
 #infos {
-  position: relative;
-  bottom: 15vh;
+
   display: flex;
   overflow: auto;
   
@@ -291,7 +295,7 @@ video {
   margin-bottom: 10px;
 }
 #runningcycle {
-  margin-top: 18px;
+  margin-top: 13px;
   margin-left: 2vw;
   margin-right: 2vw;
   width: 40vw;
@@ -321,7 +325,7 @@ h2 {
 #Sensorsval {
   float: left;
   border: 1px;
-  background-color: /* #D6EFFF */ #ebf7ff;
+  background-color: /* #D6EFFF */ #8d99ae;
 }
 #temperature,
 #Humidity,
@@ -338,7 +342,7 @@ h2 {
   /* 	float: right; */
   margin-left: 19px;
   border: 1px;
-  background-color: #dda15e;
+  background-color: #ced4da;
 }
 #Sensorsval,
 #userval {
@@ -378,14 +382,14 @@ input {
   text-align: center;
 }
 input {
-  background-color:#1e6091;
+  background-color:#000000;
   color: white;
   border: none;
   text-align: center;
   font-size: 1.5em;
 }
 #userval  input:hover {
-  background-color: #a8c686;
+  background-color: #ee6c4d;
   transition: 0.2s;
   border-radius: 1em;
 }
@@ -442,11 +446,11 @@ span {
 }
 #cycleinf {
   border: 1px;
-  background-color: #ebf7ff;
+  background-color: #b7e4c7;
 }
 #schemeinf {
   margin-left: 10px;
-  background-color: #ebeced;
+  background-color: #ffafcc;
 }
 #cycleinf,
 #schemeinf {
@@ -502,13 +506,13 @@ td:hover {
 #growCycle {
   margin-left: 1vw;
   align-self: center;
-  background-color: #ecf39e;
+  background-color: #c38e70;
   width: 40%;
   height: 29vh;
   min-height: 150px;
   padding: 10px;
   border-radius: 10px;
-  opacity: 0;
+ 
 }
  .calendar:hover  > #growCycle {
   opacity: 1;
@@ -518,6 +522,7 @@ td:hover {
   font-weight: 500;
 }
 #executionschedule {
+  margin-top: 18px;
   width: 42vw;
   margin-left: 3vw;
 }
