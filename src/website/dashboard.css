@@ -267,14 +267,15 @@ img {
 #videoblock {
   text-align: center;
   border-top: 1px solid black;
-  margin-top: 2.5%;
+  margin-top: 0.3%;
+  margin-bottom: 1%;
 
  
 }
 
 video {
   margin-top: 2%;
-  height: 60%;
+  height: 40%;
   width: 60%;
 
 }
@@ -305,7 +306,6 @@ video {
   padding: 2px 2vw;
 }
 .growcycletitle {
-  margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 1px solid black;
 }
@@ -317,7 +317,7 @@ h2 {
 .env {
   border-top: 1px solid black;
   display: flex;
-  padding: 10px;
+  padding: 40px;
   justify-content: space-around;
   margin-left: 50px;
   margin-right: auto;
@@ -470,6 +470,8 @@ span {
 }
 #runningcycle {
   overflow: auto;
+  height: 50%;
+  margin-bottom: ;
 }
 
 table {
@@ -522,8 +524,8 @@ td:hover {
   font-weight: 500;
 }
 #executionschedule {
-  margin-top: 18px;
-  width: 42vw;
+  position: relative;
+  bottom: 1.5em;
   margin-left: 3vw;
 }
 .grw {
