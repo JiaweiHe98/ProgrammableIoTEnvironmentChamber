@@ -13,6 +13,12 @@ This section will guide you through the main progresses we have achieved.
 ### Lighting Control System
 Since this part is very complicated and has plenty of contents, we have created a separated repository for it and treated it as a small project. Please check out [4ChannelBTA16TRIACControl](https://github.com/JiaweiHe98/4ChannelBTA16TRIACControl) for more information about the Lighting Control System!
 
+### Automatic Sensor Data Acquisition System
+
+#### Node-Red dashboard
+<img src="./img/backendSensorDashboard.png">
+This node-red dashboard is designed as the monitoring tool to look up the data readings from all kinds of sensors in use. It also serves as a backup system if the main web user interface was not working properly.
+
 ## Project Statement
 The objective is to provide an environmental chamber for agricultural research in space. The chamber allows the user to control the environmental conditions such as light, temperature, and humidity. This means that the user would be able to maximize the growth of plants by simulating the ideal conditions that would not be available in the surrounding environment. The user would also be able to simulate shorter growing seasons for their plants. This project is a solution that gives humans an opportunity to research growing sustainable crops in a controlled environment.
 
@@ -89,7 +95,17 @@ SolidWorks Visualize is an add-on package to SolidWorks. It allow you to render 
 
 ## Background Information
 
-### Photosynthesis
+### Ideal Conditions for Plant Growth
+
+
+| Plant        | Light Intensity       | Temperature Range     | Moisture in Air    | Time to fully develop    | Soil Quality    |
+|--------------|-----------------------|-----------------------|--------------------|--------------------------|-----------------|
+| Potatoes     | 200-250 µmol/(m^2*s)     | 60-70°F               | 80-90%             | 70-120 days              | 5.0-7.0 pH      |
+| Corn         | 500-2000 µmol/(m^2*s)    | 60-65°F               | 35-40%             | 58-65 days               | 5.8-6.5 pH      |
+| Tomatoes     | 400-500 µmol/(m^2*s)     | 55-75°F               | 80-90%             | 50-180 days              | 6.0-7.0 pH      |
+| Soybeans     | 400-500 µmol/(m^2*s)     | 60-70°F               | 55-70%             | 45-65 days               | 6.0-6.8 pH      |
+
+The table shows some plants that probably grow in the chamber and environmental recommendations of growth. The design ideas are to reach the best environmental requirements of the plants. In another word, the light intensity needs to be varied from 200 µmol/(m^2*s) to 500 µmol/(m^2*s), also temperature and humidity ranges are suitable. The information will contribute to sensors purchase that you can buy the sensors most match the case.
 
 ### Control System Basics
 
