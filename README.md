@@ -95,7 +95,17 @@ SolidWorks Visualize is an add-on package to SolidWorks. It allow you to render 
 
 ## Background Information
 
-### Photosynthesis
+### Ideal Conditions for Plant Growth
+
+
+| Plant        | Light Intensity       | Temperature Range     | Moisture in Air    | Time to fully develop    | Soil Quality    |
+|--------------|-----------------------|-----------------------|--------------------|--------------------------|-----------------|
+| Potatoes     | 200-250 µmol/(m^2*s)     | 60-70°F               | 80-90%             | 70-120 days              | 5.0-7.0 pH      |
+| Corn         | 500-2000 µmol/(m^2*s)    | 60-65°F               | 35-40%             | 58-65 days               | 5.8-6.5 pH      |
+| Tomatoes     | 400-500 µmol/(m^2*s)     | 55-75°F               | 80-90%             | 50-180 days              | 6.0-7.0 pH      |
+| Soybeans     | 400-500 µmol/(m^2*s)     | 60-70°F               | 55-70%             | 45-65 days               | 6.0-6.8 pH      |
+
+The table shows some plants that probably grow in the chamber and environmental recommendations of growth. The design ideas are to reach the best environmental requirements of the plants. In another word, the light intensity needs to be varied from 200 µmol/(m^2*s) to 500 µmol/(m^2*s), also temperature and humidity ranges are suitable. The information will contribute to sensors purchase that you can buy the sensors most match the case.
 
 ### Control System Basics
 
