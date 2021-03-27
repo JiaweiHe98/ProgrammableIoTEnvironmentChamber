@@ -1,3 +1,5 @@
+// const { response } = require("express");
+
 const temperature = document.getElementById("temperature");
 const humidity = document.getElementById("Humidity");
 const wind = document.getElementById("wind");
@@ -19,19 +21,10 @@ const growCycle = document.getElementById("growCycle")
 document.getElementById(currentDay).style.backgroundColor = "#98c1d9";
 
 caption.innerText = `${date[1]}  ${date[3]}`;
-sensorRefresher.addEventListener("click", () => {
-    const random = Math.floor(Math.random()*4);
-    const random1 = Math.floor(Math.random()*4);
-    const random2 = Math.floor(Math.random()*4);
-    const random3 = Math.floor(Math.random()*4);
-    const random4 = Math.floor(Math.random()*4);
-    temperature.value = jsonData.temperature[random];
-    humidity.value = jsonData.humidity[random1];
-    wind.value = jsonData.windSpeed[random2];
-    light1.value = jsonData.lightIntensity.aisles1[random3];
-    light2.value = jsonData.lightIntensity.aisles2[random4];
-  lastUpdate.innerText = new Date();
-});
+
+
+
+
 lastUpdate.innerText = new Date();
 
 userRefresher.addEventListener("click", ()=> {
@@ -39,11 +32,12 @@ userRefresher.addEventListener("click", ()=> {
 });
 
 const getSensorData = async () => {
-  const response = await fetch();
+  const response = await fetch("/sensorData");
+  console.log(response);
   try {
     if (response.ok) {
-      const jsonResponse = response.json();
-      console.log(`fetch the data succsessfully ${jsonResponse}`);
+      const jsonResponse = await response.json();
+      console.log(jsonResponse);
       return jsonResponse;
     }
     throw new Error("ooppps, something wrong with fetching the data");
@@ -52,18 +46,32 @@ const getSensorData = async () => {
   }
 };
 
+sensorRefresher.addEventListener('click', ()=> {
+  getSensorData()
+  .then((jsonResponse) => {
+    temperature.value = jsonResponse.sensorData.temperature;
+    humidity.value = jsonResponse.sensorData.humidity;
+    wind.value = jsonResponse.sensorData.windSpeed;
+    light1.value = jsonResponse.sensorData.lightIntensity;
+    light2.value = jsonResponse.sensorData.lightIntensity;
+    lastUpdate.innerText = new Date();
+  })
+})
+
+
+
 //function for posting user's setting data 
 
-const postData = async (url='', data = {}) => {
-    const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    });
-    return response.json();
-}
+// const postData = async (url='', data = {}) => {
+//     const response = await fetch(url, {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(data)
+//     });
+//     return response.json();
+// }
 
 
 document.getElementById('23').addEventListener('click', ()=> {
@@ -83,29 +91,17 @@ const executeUserRefresh = () => {
     light2u.value = light[random];
 }
 
-// executeDisplay is used to display sensor date on the sensor count.
-const executeDisplay = () => {
-  getSensorData.then((jsonData) => {
-    const random = Math.floor(Math.random()*4);
-    temperature.value = jsonData.temperature[random];
-    humidity.value = jsonData.humidity[random];
-    wind.value = jsonData.windSpeed[random];
-    light1.value = jsonData.lightIntensity.aisles1[random];
-    light2.value = jsonData.lightIntensity.aisles2[random];
-    lastUpdate.innerText = new Date();
-  });
-};
 
 
-const jsonData = {
-  temperature: ["50","60","70","75"],
-  humidity: ["50","60","70","80"],
-  windSpeed: ["10","15","20","25"],
-  lightIntensity: {
-    aisles1: ["100", "300", "500", "700"],
-    aisles2: ["100", "300", "500", "700"],
-  },
-};
+// const jsonData = {
+//   temperature: ["50","60","70","75"],
+//   humidity: ["50","60","70","80"],
+//   windSpeed: ["10","15","20","25"],
+//   lightIntensity: {
+//     aisles1: ["100", "300", "500", "700"],
+//     aisles2: ["100", "300", "500", "700"],
+//   },
+// };
 
 
 
