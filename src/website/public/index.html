@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="dashboard.css">
-	<link rel="stylesheet" type="text/css" href="flaticon.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<title>Dashboard</title>
 	<script src="https://use.fontawesome.com/9683f032f9.js"></script>
 </head>
@@ -27,14 +28,19 @@
 
 	<section id="infos">
 		<section id="Environmentalcond">
-			<h2>Plants Setup</h2>
-			<div id="videoblock">
-				<video controls>
-					<source src="Tree_4.mp4" type="video/mp4">
-				</video>
+			<h2>Weather</h2>
+			<div id="weather-wrapper">
+				<div id="weather-content">
+
+				</div>
+
 			</div>
-			<h2>Environmental Conditions</h2>
+			<div class="Env">
+				<h2>Environmental Conditions</h2>
+			</div>
+			
 			<div class="env">
+				
 				<div id="Sensorsval">
 					<p class="tiltes"> Sensors readings <i class="fa-refresh fa" , id="#sensorRefresher"></i> </p>
 					<p id="lupdate"> </p>
@@ -155,6 +161,9 @@
 					<p class="button-r">More </p>
 				</div>
 			</section>
+			<div>
+				
+			</div>
 
 			<section id="executionschedule">
 				<h2 class="growcycletitle grw">Growth Cycle Schedule</h2>
