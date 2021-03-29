@@ -197,9 +197,8 @@ header {
   padding: 0.1em;
   margin-left: -2px;
   position: sticky;
-  overflow:auto;
+  overflow: auto;
 }
-
 
 li {
   border: 2px white;
@@ -254,13 +253,11 @@ h1 {
   padding: 0px;
 }
 img {
-  width: 5%;
+  width: 4%;
   display: inline-block;
   height: 100%;
   min-height: 60px;
   min-width: 65px;
-
-
 }
 
 #weather-wrapper {
@@ -271,7 +268,6 @@ img {
   margin-top: 0.3%;
   margin-bottom: 1%;
   height: 25em;
-  
 }
 
 #weather-content {
@@ -279,10 +275,9 @@ img {
   height: 260px;
   width: 300px;
   padding: 20px;
- 
 }
 
-#weather-content h2{
+#weather-content h2 {
   font-family: Montserrat;
   font-size: 18px;
   line-height: 0.78;
@@ -291,48 +286,40 @@ img {
   position: relative;
   padding: 15px;
 }
-#weather-content img{
+#weather-content img {
   height: auto;
 }
-
-
 
 video {
   margin-top: 2%;
   height: 40%;
   width: 60%;
-
 }
 
-
 #infos {
-
   display: flex;
   overflow: auto;
-  
 }
 #Environmentalcond {
   width: 50vw;
-  
+
   margin-top: 20px;
   /* 	border: 1px solid black; */
   margin-left: 0px;
   margin-bottom: 10px;
 }
 #runningcycle {
-  margin-top: 13px;
+  border-top: 1px solid black;
   margin-left: 2vw;
   margin-right: 2vw;
   width: 40vw;
   /* 	border: 1px solid black; */
-  border-radius: 10px;
-  height: 38vh;
-  padding: 2px 2vw;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 350px;
 }
-.growcycletitle {
-  padding-bottom: 5px;
-  border-bottom: 1px solid black;
-}
+
 h2 {
   text-align: center;
   font-size: 1.7em;
@@ -372,7 +359,6 @@ h2 {
 #userval {
   padding: 4px;
   border-radius: 20px;
-  
 }
 
 label {
@@ -406,13 +392,13 @@ input {
   text-align: center;
 }
 input {
-  background-color:#000000;
+  background-color: #000000;
   color: white;
   border: none;
   text-align: center;
   font-size: 1.5em;
 }
-#userval  input:hover {
+#userval input:hover {
   background-color: #ee6c4d;
   transition: 0.2s;
   border-radius: 1em;
@@ -427,7 +413,7 @@ label,
 p,
 span {
   font-family: Montserrat;
-  font-size: 1.5em;
+  font-size: 18px;
 }
 #lupdate {
   font-size: 1em;
@@ -436,7 +422,6 @@ span {
 #runningcyclecont {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
 }
 .button-rcycle {
   float: right;
@@ -481,21 +466,16 @@ span {
   padding: 7px;
   border: 1px solid #ebf7ff;
   border-radius: 10px;
-  
 }
 .title {
   font-weight: 500;
 }
 #lefthands {
-  overflow: auto;
+  margin-top: 20px;
+
   display: flex;
   flex-direction: column;
   align-content: center;
-}
-#runningcycle {
-  overflow: auto;
-  height: 50%;
-  margin-bottom: ;
 }
 
 table {
@@ -538,9 +518,8 @@ td:hover {
   min-height: 150px;
   padding: 10px;
   border-radius: 10px;
- 
 }
- .calendar:hover  > #growCycle {
+.calendar:hover > #growCycle {
   opacity: 1;
 }
 #schm-title {
@@ -548,10 +527,237 @@ td:hover {
   font-weight: 500;
 }
 #executionschedule {
-  position: relative;
-  bottom: 1.5em;
   margin-left: 3vw;
 }
 .grw {
-  margin-bottom: 4vh;
+  margin-left: 3vw;
+  margin-bottom: 40px;
+  border-bottom: 1px solid black;
+  padding-bottom: 6px;
+}
+.growcycletitle {
+  padding-bottom: 1px;
+}
+
+@media screen and (max-width: 1919px) {
+  li {
+    border: 2px white;
+    border-style: solid;
+    padding: 5px;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 10px;
+  }
+  .menu {
+    font-size: 20px;
+  }
+  table {
+    margin-left: 2vw;
+    border-collapse: collapse;
+    border-spacing: 10px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    width: 250px;
+    height: 300px;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  #infos {
+    display: block;
+    text-align: center;
+    padding: 10% 25% 10% 25%;
+    
+  }
+  .env {
+    margin-left: 0%;
+  }
+  .menu {
+    font-size: 10px;
+  }
+  label,
+  p,
+  span {
+    font-family: Montserrat;
+    font-size: 10px;
+  }
+  h1,
+  h2,
+  nav {
+    font-family: Work Sans;
+    font-size: 12px;
+  }
+  table {
+    margin-left: 2vw;
+    border-collapse: collapse;
+    border-spacing: 10px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    width: 80px;
+    height: 80px;
+
+  }
+  #lefthands {
+    width: 50vw;
+    margin-top: 20px;
+  
+    margin-bottom: 10px
+  }
+  #lupdate {
+    font-size: 10px;
+    text-align: center;
+  }
+  input {
+    background-color: #000000;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 10px;
+  }
+  #growCycle {
+    margin-left: 1vw;
+    align-self: center;
+    background-color: #c38e70;
+    width: 200px;
+    height: 100px;
+    min-height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .calendar {
+    display: block;
+  }
+  .menucont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c757d /*rgb(131, 199, 111)*/;
+    text-align: center;
+    width: 100vw;
+    border-radius: 0px 0px 8px;
+    padding: 0.1em;
+    margin-left: -2px;
+    position: sticky;
+    overflow: auto;
+}
+    .menu {
+    display: inline-block;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  td {
+    text-align: center;
+    padding: 1px;
+    border: 1px solid;
+}
+}
+
+@media screen and (max-width: 556px) {
+  #infos {
+    display: block;
+    text-align: center;
+    padding: 10% 25% 10% 25%;
+    
+  }
+  #weather-content h2 {
+    font-family: Montserrat;
+    font-size: 10px;
+    line-height: 0.78;
+    text-align: left;
+    color: #4a4a4a;
+    position: relative;
+    padding: 15px;
+}
+  .env {
+    margin-left: 0%;
+  }
+  .menu {
+    font-size: 10px;
+  }
+  label,
+  p,
+  span {
+    font-family: Montserrat;
+    font-size: 10px;
+  }
+  h1,
+  h2,
+  nav {
+    display: block;
+    font-family: Work Sans;
+    font-size: 10px;
+  }
+  table {
+    margin-left: 2vw;
+    border-collapse: collapse;
+    border-spacing: 10px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    width: 80px;
+    height: 80px;
+
+  }
+  img {
+    width: 4%;
+    display: inline-block;
+    height: 80%;
+    min-height: 30px;
+    min-width: 35px;
+}
+
+  #lefthands {
+    width: 50vw;
+    margin-top: 20px;
+  
+    margin-bottom: 10px
+  }
+  #lupdate {
+    font-size: 10px;
+    text-align: center;
+  }
+  input {
+    background-color: #000000;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 10px;
+  }
+  #growCycle {
+    margin-left: 1vw;
+    align-self: center;
+    background-color: #c38e70;
+    width: 100px;
+    height: 100px;
+    min-height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .calendar {
+    display: block;
+  }
+  .menucont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c757d /*rgb(131, 199, 111)*/;
+    text-align: center;
+    width: 100vw;
+    border-radius: 0px 0px 8px;
+    padding: 0.1em;
+    margin-left: -2px;
+    position: sticky;
+    overflow: auto;
+    height: 60px;
+}
+    .menu {
+    display: inline-block;
+    padding: 1px
+  }
+  td {
+    text-align: center;
+    padding: 1px;
+    border: 1px solid;
+}
 }
