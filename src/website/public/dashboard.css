@@ -96,69 +96,6 @@ html {
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
-/*FONTS*/
-@font-face {
-  font-family: "montserratsemibold";
-  src: url("fonts/montserrat-semibold-webfont.woff2") format("woff2"),
-    url("fonts/montserrat-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "dosisextralight";
-  src: url("fonts/dosis-variablefont_wght-webfont.woff2") format("woff2"),
-    url("fonts/dosis-variablefont_wght-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ubuntumedium";
-  src: url("fonts/ubuntu-medium-webfont.woff2") format("woff2"),
-    url("fonts/ubuntu-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ubuntubold";
-  src: url("fonts/ubuntu-bold-webfont.woff2") format("woff2"),
-    url("fonts/ubuntu-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "overlockblack";
-  src: url("fonts/overlock-black-webfont.woff2") format("woff2"),
-    url("fonts/overlock-black-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "patrick_handregular";
-  src: url("fonts/patrickhand-regular-webfont.woff2") format("woff2"),
-    url("fonts/patrickhand-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "signikaregular";
-  src: url("fonts/signika-regular-webfont.woff2") format("woff2"),
-    url("fonts/signika-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "eb_garamondregular";
-  src: url("fonts/ebgaramond-variablefont_wght-webfont.woff2") format("woff2"),
-    url("fonts/ebgaramond-variablefont_wght-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 
 header {
   margin: 0px 0px 0px 0px;
@@ -308,6 +245,8 @@ video {
   margin-left: 0px;
   margin-bottom: 10px;
 }
+
+
 #runningcycle {
   border-top: 1px solid black;
   margin-left: 2vw;
@@ -396,7 +335,8 @@ input {
   color: white;
   border: none;
   text-align: center;
-  font-size: 1.5em;
+  width: 70px;
+  font-size: 15px;
 }
 #userval input:hover {
   background-color: #ee6c4d;
@@ -655,6 +595,46 @@ td:hover {
 }
 
 @media screen and (max-width: 556px) {
+  body {
+    min-width: 243px;
+  }
+  
+  .lightss {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  #Sensorsval {
+    float: none;
+    border: 1px;
+    background-color: /* #D6EFFF */ #8d99ae;
+    min-width: 170px;
+    margin-left: -60px;
+
+  }
+  #userval {
+    padding: 0px;
+    border-radius: 20px;
+    margin-left: -60px;
+    border: 1px;
+    background-color: #ced4da;
+    min-width: 180px;
+}
+  .env {
+    border-top: 1px solid black;
+    display: block;
+    padding-top: 40px;
+    margin-left: 50px;
+    margin-right: auto;
+}
+  input {
+    background-color: #000000;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 10px;
+    width: 35px;
+}
   #infos {
     display: block;
     text-align: center;

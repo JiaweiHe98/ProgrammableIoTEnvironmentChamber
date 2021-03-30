@@ -12,6 +12,8 @@ const humidityu = document.getElementById("Humidityu");
 const windu = document.getElementById("windu")
 const light1u = document.getElementById("light1u");
 const light2u = document.getElementById("light2u");
+const light3u = document.getElementById("light3u");
+const light4u = document.getElementById("light4u");
 const userRefresher = document.getElementById("userRefresher");
 const caption = document.getElementById("caption");
 const d = new Date();
@@ -21,25 +23,60 @@ const growCycle = document.getElementById("growCycle")
 const openWeatherKey = 'd0fa2e540d5665e291f3ee86e658735c';
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const userPost = document.getElementById('userPost');
+
+const postSetting = async () => {
+  let postData = {
+    userSetting: {
+      temperature: tempu.value,
+      humidity: humidityu.value,
+      windSpeed: windu.value,
+      lightIntensity: {
+        Aisles_1: light1u.value,
+        Aisles_2: light2u.value,
+        Aisles_3: light3u.value,
+        Aisles_4: light4u.value
+      }
+    }
+  }
+  const response = await fetch('/sensorData', {
+    method: 'PUT',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(postData)
+  });
+  if (response.ok) {
+    const jsonResponse = await response.json();
+    console.log(jsonResponse);
+    return jsonResponse;
+  } else {
+    throw new Error('Request failed');
+  }
+};
+
+document.getElementById("userPost").addEventListener("click", () => {
+  postSetting();
+})
 
 
 const getForecast = async () => {
-  try{
+  try {
     const urlToFetch = `${weatherUrl}?&q=West Melbourne&APPID=${openWeatherKey}`;
     const response = await fetch(urlToFetch);
-    if(response.ok) {
+    if (response.ok) {
       const jsonResponse = await response.json();
       console.log(jsonResponse);
       return jsonResponse;
     }
     throw new Error("Request failed!");
-  } catch(error) {
+  } catch (error) {
     console.log(error);
   }
 }
 
-const renderForecast = (day) => { 
-	let weatherContent = createWeatherHTML(day);
+const renderForecast = (day) => {
+  let weatherContent = createWeatherHTML(day);
   document.getElementById('weather-content').innerHTML = weatherContent
 }
 
@@ -101,10 +138,20 @@ sensorRefresher.addEventListener('click', () => {
       humidity.value = jsonResponse.sensorData.humidity;
       wind.value = jsonResponse.sensorData.windSpeed;
       light1.value = jsonResponse.sensorData.lightIntensity;
-      light2.value = jsonResponse.sensorData.lightIntensity;
       lastUpdate.innerText = new Date();
     })
 })
+
+window.addEventListener('load', () => {
+  getSensorData()
+    .then((jsonResponse) => {
+      temperature.value = jsonResponse.sensorData.temperature;
+      humidity.value = jsonResponse.sensorData.humidity;
+      wind.value = jsonResponse.sensorData.windSpeed;
+      light1.value = jsonResponse.sensorData.lightIntensity;
+      lastUpdate.innerText = new Date();
+    })
+});
 
 
 
