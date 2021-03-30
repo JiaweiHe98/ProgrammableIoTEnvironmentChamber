@@ -20,7 +20,14 @@ data.sensorData = {
     lightIntensity: dataArray[2],
     windSpeed: dataArray[3],
 };
-data.userSetting = {};
+data.userSetting = {
+    lightIntensity: {
+        Aisles_1: '',
+        Aisles_2: '',
+        Aisles_3: '',
+        Aisles_4: ''
+    }
+};
 
 // read the index file per secdon in order for the in-time updating the sensor data
 setInterval(() => {
@@ -64,14 +71,25 @@ app.put("/sensorData", (req, res, next) => {
 });
 
 
-let serialport = require('serialport');
+const SerialPort = require('serialport');
+// Promise approach
+SerialPort.list().then(ports => {
+  ports.forEach(function(port) {
+    console.log(port.path);
+    console.log(port.pnpId);
+    console.log(port.manufacturer);
+  });
+});
+let serialport = require('serialport');// include the library
+// get port name from the command line:
+let portName = process.argv[2];
+var myPort = new SerialPort(portName, 115200);
 
-// list serial ports:
-serialport.list((err,ports) => {
-    ports.forEach((port) => {
-        console.log(port.comName);
-    })
+myPort.write(`[${data.userSetting.lightIntensity.Aisles_1},${data.userSetting.lightIntensity.Aisles_2}, ${data.userSetting.lightIntensity.Aisles_3}, ${data.userSetting.lightIntensity.Aisles_4}]`, () => {
+    console.log('Write Successfully!')
 })
+
+
 app.listen(PORT, () => {
     console.log("server connected successfully!");
 });

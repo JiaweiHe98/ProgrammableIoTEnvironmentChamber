@@ -12,7 +12,11 @@ let serialport = require('serialport');// include the library
 let portName = process.argv[2];
 var myPort = new SerialPort(portName, 9600);
 
-myPort.write(`[${data.userSetting.lightIntensity[Aisles_1]},${data.userSetting.lightIntensity[Aisles_2]}, ${data.userSetting.lightIntensity[Aisles_3]}, ${data.userSetting.lightIntensity[Aisles_3]}]`)
+myPort.write('[20,30,40,50]', ()=> {
+  console.log('write successfully!');
+});
+
+//myPort.write(`[${data.userSetting.lightIntensity[Aisles_1]},${data.userSetting.lightIntensity[Aisles_2]}, ${data.userSetting.lightIntensity[Aisles_3]}, ${data.userSetting.lightIntensity[Aisles_3]}]`)
 
 
 /* // make instance of Readline parser
