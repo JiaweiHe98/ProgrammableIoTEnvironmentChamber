@@ -63,6 +63,15 @@ app.put("/sensorData", (req, res, next) => {
     }
 });
 
+
+let serialport = require('serialport');
+
+// list serial ports:
+serialport.list((err,ports) => {
+    ports.forEach((port) => {
+        console.log(port.comName);
+    })
+})
 app.listen(PORT, () => {
     console.log("server connected successfully!");
 });
