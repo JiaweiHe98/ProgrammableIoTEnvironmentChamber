@@ -45,9 +45,9 @@ void loop() {
   // Updating states for each channel
   for (int i = 0; i < 8; i++) {
     if (states[i]) {
-      digitalWrite(pins[i], HIGH);
-    } else {
       digitalWrite(pins[i], LOW);
+    } else {
+      digitalWrite(pins[i], HIGH);
     }
   }
 
