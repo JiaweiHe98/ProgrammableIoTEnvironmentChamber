@@ -22,10 +22,10 @@ data.sensorData = {
 };
 data.userSetting = {
     lightIntensity: {
-        Aisles_1: '',
-        Aisles_2: '',
-        Aisles_3: '',
-        Aisles_4: ''
+        Aisles_1: '1',
+        Aisles_2: '1',
+        Aisles_3: '1',
+        Aisles_4: '1'
     }
 };
 
@@ -44,6 +44,16 @@ setInterval(() => {
         windSpeed: dataArray[3],
     };
 }, 1000);
+
+setInterval(() => {
+    let setting = `${data.userSetting.lightIntensity.Aisles_1}\n${data.userSetting.lightIntensity.Aisles_2}\n${data.userSetting.lightIntensity.Aisles_3}\n${data.userSetting.lightIntensity.Aisles_4}\n`
+    fs.writeFile('light.txt', setting, (err)=> {
+    if(err) {
+        return console.log(err.message);
+    }
+    console.log("data written successfully!");
+})}, 500);
+
 
 app.use(bodyParser.json());
 
@@ -71,23 +81,28 @@ app.put("/sensorData", (req, res, next) => {
 });
 
 
-const SerialPort = require('serialport');
+// const SerialPort = require('serialport');
 // Promise approach
-SerialPort.list().then(ports => {
-  ports.forEach(function(port) {
-    console.log(port.path);
-    console.log(port.pnpId);
-    console.log(port.manufacturer);
-  });
-});
-let serialport = require('serialport');// include the library
+// SerialPort.list().then(ports => {
+//   ports.forEach(function(port) {
+//     console.log(port.path);
+//     console.log(port.pnpId);
+//     console.log(port.manufacturer);
+//   });
+// });
+//let serialport = require('serialport');// include the library
 // get port name from the command line:
-let portName = process.argv[2];
-var myPort = new SerialPort(portName, 115200);
+//let portName = process.argv[2];
 
-myPort.write(`[${data.userSetting.lightIntensity.Aisles_1},${data.userSetting.lightIntensity.Aisles_2}, ${data.userSetting.lightIntensity.Aisles_3}, ${data.userSetting.lightIntensity.Aisles_4}]`, () => {
-    console.log('Write Successfully!')
-})
+
+//  setInterval(() => {
+  //let light = `${data.userSetting.lightIntensity.Aisles_1}, ${data.userSetting.lightIntensity.Aisles_2}, ${data.userSetting.lightIntensity.Aisles_3}, ${data.userSetting.lightIntensity.Aisles_4}`
+//     var myPort = new SerialPort(portName, 115200);
+//     myPort.write("100,20,30,40",() => {
+//     console.log('Write Successfully!')
+// })
+//  }, 10000);
+
 
 
 app.listen(PORT, () => {
