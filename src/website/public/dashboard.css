@@ -345,8 +345,13 @@ input {
 
 .wind-wrapper {
   flex-wrap: wrap;
-  width: 75%;
+  width: 70%;
 }
+
+#switch2-wrapper {
+  padding-left: 50px;
+}
+
 h1,
 h2,
 nav {
@@ -484,6 +489,10 @@ td:hover {
 }
 
 @media screen and (max-width: 1919px) {
+  .wind-wrapper {
+    flex-wrap: wrap;
+    width: 80%;
+}
   li {
     border: 2px white;
     border-style: solid;
@@ -559,10 +568,10 @@ td:hover {
   .wind-wrapper {
     width: 65%;
   }
-  .fan-wrapper {
-    padding-left: 50px;
-
+  #fanWrapper2 {
+    padding-left: 55px;
   }
+ 
     
   #lupdate {
     font-size: 10px;
@@ -624,6 +633,9 @@ td:hover {
   .wind-wrapper {
     width: 80%;
   }
+  #fanWrapper2 {
+    padding-left: 0px;
+}
   .lightss {
     display: flex;
     justify-content: center;
@@ -645,6 +657,7 @@ td:hover {
     background-color: #ced4da;
     min-width: 180px;
 }
+
   .env {
     border-top: 1px solid black;
     display: block;

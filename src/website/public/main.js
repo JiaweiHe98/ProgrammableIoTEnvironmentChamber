@@ -26,7 +26,9 @@ const openWeatherKey = 'd0fa2e540d5665e291f3ee86e658735c';
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const userPost = document.getElementById('userPost');
-const fanSwitch = document.getElementById('fanSwitch');
+const fanSwitch1 = document.getElementById('fanSwitch1');
+const fanSwitch2 = document.getElementById('fanSwitch2');
+
 
 const postSetting = async () => {
   let postData = {
@@ -58,23 +60,22 @@ const postSetting = async () => {
   }
 };
 
-fanSwitch.addEventListener("click", async () => {
-  if(fanSwitch.value == 'off'){
-    fanSwitch.style.backgroundColor = '#06d6a0'
-    fanSwitch.value = 'on';
+
+
+
+fanSwitch1.addEventListener("click", async () => {
+  if(fanSwitch1.value == 'off'){
+    fanSwitch1.style.backgroundColor = '#06d6a0'
+    fanSwitch1.value = 'on';
     let fan = {
-      fanSwitch: {
+      row_1: {
         fan_1: 1,
         fan_2: 1,
         fan_3: 1,
-        fan_4: 1,
-        fan_5: 1,
-        fan_6: 1,
-        fan_7: 1,
-        fan_8: 1
+        fan_4: 1
       }
     };
-    const response = await fetch ('/fanSwitch', {
+    const response = await fetch ('/fanSwitch/row-1', {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json'
@@ -88,21 +89,17 @@ fanSwitch.addEventListener("click", async () => {
     }
     throw new Error('Request Failed')
   } else {
-    fanSwitch.style.backgroundColor = '#e63946';
-    fanSwitch.value = 'off';
+    fanSwitch1.style.backgroundColor = '#e63946';
+    fanSwitch1.value = 'off';
     let fan = {
-      fanSwitch: {
+      row_1: {
         fan_1: 0,
         fan_2: 0,
         fan_3: 0,
-        fan_4: 0,
-        fan_5: 0,
-        fan_6: 0,
-        fan_7: 0,
-        fan_8: 0
+        fan_4: 0
       }
     };
-    const response = await fetch ('/fanSwitch', {
+    const response = await fetch ('/fanSwitch/row-1', {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json'
@@ -118,6 +115,59 @@ fanSwitch.addEventListener("click", async () => {
   }
 })
 
+
+
+fanSwitch2.addEventListener("click", async () => {
+  if(fanSwitch2.value == 'off'){
+    fanSwitch2.style.backgroundColor = '#06d6a0'
+    fanSwitch2.value = 'on';
+    let fan = {
+      row_2: {
+        fan_1: 1,
+        fan_2: 1,
+        fan_3: 1,
+        fan_4: 1
+      }
+    };
+    const response = await fetch ('/fanSwitch/row-2', {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(fan)
+    })
+    if(response.ok) {
+      const jsonResponse = await response.json();
+      console.log(jsonResponse);
+      return jsonResponse;
+    }
+    throw new Error('Request Failed')
+  } else {
+    fanSwitch2.style.backgroundColor = '#e63946';
+    fanSwitch2.value = 'off';
+    let fan = {
+      row_2: {
+        fan_1: 0,
+        fan_2: 0,
+        fan_3: 0,
+        fan_4: 0
+      }
+    };
+    const response = await fetch ('/fanSwitch/row-2', {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(fan)
+    })
+    if(response.ok) {
+      const jsonResponse = await response.json();
+      console.log(jsonResponse);
+      return jsonResponse;
+    }
+    throw new Error('Request Failed')
+  }
+})
 
 document.getElementById("userPost").addEventListener("click", () => {
   postSetting();

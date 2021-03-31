@@ -30,14 +30,18 @@ data.userSetting = {
 };
 
 data.fanSwitch = {
-    fan_1: null,
-    fan_2: null,
-    fan_3: null,
-    fan_4: null,
-    fan_5: null,
-    fan_6: null,
-    fan_7: null,
-    fan_8: null
+    row_1: {
+        fan_1: null,
+        fan_2: null,
+        fan_3: null,
+        fan_4: null
+    },
+    row_2: {
+        fan_5: null,
+        fan_6: null,
+        fan_7: null,
+        fan_8: null
+    }
 };
 
 // read the index file per secdon in order for the in-time updating the sensor data
@@ -66,8 +70,11 @@ setInterval(() => {
     console.log("data written successfully!");
 })}, 500);
 
+
+
+
 setInterval(() => {
-    let fanSetting = `${data.fanSwitch.fan_1}\n${data.fanSwitch.fan_2}\n${data.fanSwitch.fan_3}\n${data.fanSwitch.fan_4}\n${data.fanSwitch.fan_5}\n${data.fanSwitch.fan_6}\n${data.fanSwitch.fan_7}\n${data.fanSwitch.fan_8}\n`;
+    let fanSetting = `${data.fanSwitch.row_1.fan_1}\n${data.fanSwitch.row_1.fan_2}\n${data.fanSwitch.row_1.fan_3}\n${data.fanSwitch.row_1.fan_4}\n${data.fanSwitch.row_2.fan_1}\n${data.fanSwitch.row_2.fan_2}\n${data.fanSwitch.row_2.fan_3}\n${data.fanSwitch.row_2.fan_4}`
     fs.writeFile('relay.txt', fanSetting, (err) => {
         if(err) {
             return console.log(err.message);
@@ -102,11 +109,24 @@ app.put("/sensorData", (req, res, next) => {
     }
 });
 
-app.put("/fanSwitch", (req, res, next) => {
+app.put("/fanSwitch/row-1", (req, res, next) => {
     try {
-        let existence = req.body.fanSwitch;
+        let existence = req.body.row_1;
         if(existence) {
-            data.fanSwitch = req.body.fanSwitch;
+            data.fanSwitch.row_1 = req.body.row_1;
+            return res.send(data);
+        }
+        throw new Error ('No existence of fanSwitch')
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.put("/fanSwitch/row-2", (req, res, next) => {
+    try {
+        let existence = req.body.row_2;
+        if(existence) {
+            data.fanSwitch.row_2 = req.body.row_2;
             return res.send(data);
         }
         throw new Error ('No existence of fanSwitch')
