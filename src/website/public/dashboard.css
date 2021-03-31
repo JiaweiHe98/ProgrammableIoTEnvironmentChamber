@@ -318,7 +318,7 @@ label {
 }
 .lightss {
   display: flex;
-  padding: 10px;
+  padding-top: 10px;
 }
 input {
   display: inline-block;
@@ -342,6 +342,11 @@ input {
   background-color: #ee6c4d;
   transition: 0.2s;
   border-radius: 1em;
+}
+
+.wind-wrapper {
+  flex-wrap: wrap;
+  width: 75%;
 }
 h1,
 h2,
@@ -544,6 +549,14 @@ td:hover {
   
     margin-bottom: 10px
   }
+  .wind-wrapper {
+    width: 65%;
+  }
+  .fan-wrapper {
+    padding-left: 50px;
+
+  }
+    
   #lupdate {
     font-size: 10px;
     text-align: center;
@@ -598,7 +611,12 @@ td:hover {
   body {
     min-width: 243px;
   }
-  
+  .fan-wrapper {
+    padding-left: 0px;
+}
+  .wind-wrapper {
+    width: 80%;
+  }
   .lightss {
     display: flex;
     justify-content: center;

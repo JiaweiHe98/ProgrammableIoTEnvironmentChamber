@@ -15,10 +15,10 @@
 	<header>
 		<nav class="menucont">
 			<ul>
-				<li class="menu"><a href="COES_Mechanical-Engineering.html">Dashboard</a></li>
-				<li class="menu"><a href="#">Plants Setup</a></li>
-				<li class="menu"><a href="#"> Growing Cycle</a></li>
-				<li class="menu"><a href="#"> Reporting Tools</a></li>
+				<li class="menu"><a href="#Sensorsval">Dashboard</a></li>
+				<li class="menu"><a href="https://www.pinterest.com/jojapiposa/plant-setup-concepts/" target="_blank">Plants Setup</a></li>
+				<li class="menu"><a href="https://www.saferbrand.com/articles/plant-growth-stages" target="_blank"> Growing Cycle</a></li>
+				<li class="menu"><a href="./report/report.html"> Reporting Tools</a></li>
 			</ul>
 			<img src="logo.png" alt="Logo Environmental Chamber" id="logo">
 		</nav>
@@ -65,7 +65,6 @@
 
 						<div class="lightss">
 							<div>
-								<label for="light1">Aisles 1</label>
 								<input type="number" name="light1" id="light1"><span style="margin-left:5px;">lux</span>
 							</div>
 
@@ -89,9 +88,26 @@
 								style="margin-left:5px;">%</span>
 						</div>
 						<div>
-							<label class="flaticon-wind" for="wind">Wind Speed</label>
-							<input type="number" name="wind" id="windu" value="32"><span
+							<div class="wind-wrapper" style="display: flex;">
+								<div>
+									<label class="flaticon-wind" for="wind">Wind Speed</label>
+								</div>
+								<div class="fan-wrapper">
+									<label for="windButton">Fan Switch</label>
+								</div>
+								<div>
+									<input type="number" name="wind" id="windu" value="32"><span
 								style="margin-left:5px;">mph</span>
+								</div>
+								<div>
+									<input type="button" value="off" id="fanSwitch" style="background-color: #e63946;">
+								</div>
+							</div>
+							
+							
+
+							
+							
 						</div>
 
 						<p class="tiltes lighttitle flaticon-sun"> Light Intensity </p>
@@ -160,37 +176,12 @@
 
 			<h2 class="grw">Growth Cycle Schedule</h2>
 			<section id="executionschedule">
-
-
 				<div class="calendar">
-
-					<table bgcolor="lightgrey" align="center" cellspacing="21" cellpadding="21">
-
-						<!-- The tr tag is used to enter  
-            rows in the table -->
-
-						<!-- It is used to give the heading to the 
-            table. We can give the heading to the  
-            top and bottom of the table -->
-
+					<div id="CalendarTable">
+						<table bgcolor="lightgrey" align="center" cellspacing="21" cellpadding="21">
 						<caption align="top" id="caption">
-
-
-							<!-- Here we have used the attribute  
-                that is style and we have colored  
-                the sentence to make it better  
-                depending on the web page-->
 						</caption>
-
-						<!-- Here th stands for the heading of the 
-            table that comes in the first row-->
-
-						<!-- The text in this table header tag will  
-            appear as bold and is center aligned-->
-
 						<thead>
-							<!-- Here we have applied inline style  
-                    to make it more attractive-->
 							<th>S</th>
 							<th>M</th>
 							<th>T</th>
@@ -208,30 +199,30 @@
 								<td></td>
 								<td></td>
 								<td></td>
-								<td>1</td>
-								<td>2</td>
+								<td id='1'>1</td>
+								<td id='2'>2</td>
 							</tr>
 							<tr>
-								<td>3</td>
-								<td>4</td>
-								<td>5</td>
-								<td>6</td>
-								<td>7</td>
-								<td>8</td>
-								<td>9</td>
+								<td id='3'>3</td>
+								<td id='4'>4</td>
+								<td id='5'>5</td>
+								<td id='6'>6</td>
+								<td id='7'>7</td>
+								<td id='8'>8</td>
+								<td id='9'>9</td>
 							</tr>
 							<tr>
-								<td>10</td>
-								<td>11</td>
-								<td>12</td>
-								<td>13</td>
-								<td>14</td>
-								<td>15</td>
-								<td>16</td>
+								<td id='10'>10</td>
+								<td id='11'>11</td>
+								<td id='12'>12</td>
+								<td id='13'>13</td>
+								<td id='14'>14</td>
+								<td id='15'>15</td>
+								<td id='16'>16</td>
 							</tr>
 							<tr>
-								<td class="scheduled">17</td>
-								<td>18</td>
+								<td class="scheduled" id='17'>17</td>
+								<td id='18'>18</td>
 								<td class="scheduled" id="19">19</td>
 								<td class="scheduled" id="20">20</td>
 								<td id="21">21</td>
@@ -258,6 +249,8 @@
 							</tr>
 						</tbody>
 					</table>
+					</div>
+					
 					<div id="growCycle">
 						<p id="schm-title"> Cycle: Default</p>
 						<div>
@@ -286,7 +279,7 @@
 
 		</section>
 	</section>
-
+	<script src="Month.js"></script>
 	<script src="main.js"></script>
 	<footer>
 

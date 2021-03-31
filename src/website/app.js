@@ -29,6 +29,17 @@ data.userSetting = {
     }
 };
 
+data.fanSwitch = {
+    fan_1: null,
+    fan_2: null,
+    fan_3: null,
+    fan_4: null,
+    fan_5: null,
+    fan_6: null,
+    fan_7: null,
+    fan_8: null
+};
+
 // read the index file per secdon in order for the in-time updating the sensor data
 setInterval(() => {
     let updatedText = fs.readFileSync("./index.txt").toString("utf-8");
@@ -45,6 +56,7 @@ setInterval(() => {
     };
 }, 1000);
 
+//Writing light setting to light.txt file to control through a Python script over the light remotely
 setInterval(() => {
     let setting = `${data.userSetting.lightIntensity.Aisles_1}\n${data.userSetting.lightIntensity.Aisles_2}\n${data.userSetting.lightIntensity.Aisles_3}\n${data.userSetting.lightIntensity.Aisles_4}\n`
     fs.writeFile('light.txt', setting, (err)=> {
@@ -53,6 +65,16 @@ setInterval(() => {
     }
     console.log("data written successfully!");
 })}, 500);
+
+setInterval(() => {
+    let fanSetting = `${data.fanSwitch.fan_1}\n${data.fanSwitch.fan_2}\n${data.fanSwitch.fan_3}\n${data.fanSwitch.fan_4}\n${data.fanSwitch.fan_5}\n${data.fanSwitch.fan_6}\n${data.fanSwitch.fan_7}\n${data.fanSwitch.fan_8}\n`;
+    fs.writeFile('relay.txt', fanSetting, (err) => {
+        if(err) {
+            return console.log(err.message);
+        }
+        console.log('relay written');
+    })
+}, 1000);
 
 
 app.use(bodyParser.json());
@@ -79,6 +101,19 @@ app.put("/sensorData", (req, res, next) => {
         console.log(Error);
     }
 });
+
+app.put("/fanSwitch", (req, res, next) => {
+    try {
+        let existence = req.body.fanSwitch;
+        if(existence) {
+            data.fanSwitch = req.body.fanSwitch;
+            return res.send(data);
+        }
+        throw new Error ('No existence of fanSwitch')
+    } catch (error) {
+        console.log(error);
+    }
+})
 
 
 // const SerialPort = require('serialport');

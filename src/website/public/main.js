@@ -1,5 +1,7 @@
 // const { response } = require("express");
 
+
+
 const temperature = document.getElementById("temperature");
 const humidity = document.getElementById("Humidity");
 const wind = document.getElementById("wind");
@@ -24,6 +26,7 @@ const openWeatherKey = 'd0fa2e540d5665e291f3ee86e658735c';
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const userPost = document.getElementById('userPost');
+const fanSwitch = document.getElementById('fanSwitch');
 
 const postSetting = async () => {
   let postData = {
@@ -54,6 +57,67 @@ const postSetting = async () => {
     throw new Error('Request failed');
   }
 };
+
+fanSwitch.addEventListener("click", async () => {
+  if(fanSwitch.value == 'off'){
+    fanSwitch.style.backgroundColor = '#06d6a0'
+    fanSwitch.value = 'on';
+    let fan = {
+      fanSwitch: {
+        fan_1: 1,
+        fan_2: 1,
+        fan_3: 1,
+        fan_4: 1,
+        fan_5: 1,
+        fan_6: 1,
+        fan_7: 1,
+        fan_8: 1
+      }
+    };
+    const response = await fetch ('/fanSwitch', {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(fan)
+    })
+    if(response.ok) {
+      const jsonResponse = await response.json();
+      console.log(jsonResponse);
+      return jsonResponse;
+    }
+    throw new Error('Request Failed')
+  } else {
+    fanSwitch.style.backgroundColor = '#e63946';
+    fanSwitch.value = 'off';
+    let fan = {
+      fanSwitch: {
+        fan_1: 0,
+        fan_2: 0,
+        fan_3: 0,
+        fan_4: 0,
+        fan_5: 0,
+        fan_6: 0,
+        fan_7: 0,
+        fan_8: 0
+      }
+    };
+    const response = await fetch ('/fanSwitch', {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(fan)
+    })
+    if(response.ok) {
+      const jsonResponse = await response.json();
+      console.log(jsonResponse);
+      return jsonResponse;
+    }
+    throw new Error('Request Failed')
+  }
+})
+
 
 document.getElementById("userPost").addEventListener("click", () => {
   postSetting();
@@ -106,6 +170,19 @@ document.getElementById('weather-content').addEventListener('load', weatherDispl
 document.getElementById(currentDay).style.backgroundColor = "#98c1d9";
 
 caption.innerText = `${date[1]}  ${date[3]}`;
+
+if(date[1] == 'Mar') {
+  document.getElementById('CalendarTable').innerHTML = year.Mar
+  document.getElementById('caption').innerText = `${date[1]}  ${date[3]}`;
+  document.getElementById(currentDay).style.backgroundColor = "#98c1d9";
+}
+
+if(date[1] == 'Apri') {
+  document.getElementById('CalendarTable').innerHTML = year.April
+  document.getElementById('caption').innerText = `${date[1]}  ${date[3]}`;
+  document.getElementById(currentDay).style.backgroundColor = "#98c1d9";
+}
+
 
 
 
@@ -174,16 +251,21 @@ document.getElementById('23').addEventListener('click', () => {
 
 })
 const executeUserRefresh = () => {
-  const random = Math.floor(Math.random() * 4);
+  const random_1 = Math.floor(Math.random() * 4);
+  const random_2 = Math.floor(Math.random() * 4);
+  const random_3 = Math.floor(Math.random() * 4);
+  const random_4 = Math.floor(Math.random() * 4);
   const temp = ["50", "60", "70", "75"];
   const humidity = ["50", "60", "70", "80"];
   const wind = ["10", "15", "20", "25"];
-  const light = ["100", "300", "500", "700"];
-  tempu.value = temp[random];
-  humidityu.value = humidity[random];
-  windu.value = wind[random];
-  light1u.value = light[random];
-  light2u.value = light[random];
+  const light = ["30", "50", "70", "90"];
+  tempu.value = temp[random_1];
+  humidityu.value = humidity[random_2];
+  windu.value = wind[random_3];
+  light1u.value = light[random_1];
+  light2u.value = light[random_2];
+  light3u.value = light[random_3];
+  light4u.value = light[random_4];
 }
 
 
