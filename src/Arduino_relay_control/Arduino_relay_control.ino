@@ -30,14 +30,14 @@ void setup() {
   pinMode(ch7, OUTPUT);
   pinMode(ch8, OUTPUT);
 
-  digitalWrite(ch1, LOW);
-  digitalWrite(ch2, LOW);
-  digitalWrite(ch3, LOW);
-  digitalWrite(ch4, LOW);
-  digitalWrite(ch5, LOW);
-  digitalWrite(ch6, LOW);
-  digitalWrite(ch7, LOW);
-  digitalWrite(ch8, LOW);
+  digitalWrite(ch1, HIGH);
+  digitalWrite(ch2, HIGH);
+  digitalWrite(ch3, HIGH);
+  digitalWrite(ch4, HIGH);
+  digitalWrite(ch5, HIGH);
+  digitalWrite(ch6, HIGH);
+  digitalWrite(ch7, HIGH);
+  digitalWrite(ch8, HIGH);
 
 }
 
