@@ -318,7 +318,6 @@ label {
 }
 .lightss {
   display: flex;
-  padding-top: 10px;
 }
 input {
   display: inline-block;
@@ -509,6 +508,14 @@ td:hover {
 
 
 @media screen and (max-width: 1200px) {
+  #Sensorsval {
+    padding: 4px;
+    border-radius: 20px;
+    float: left;
+    border: 1px;
+    background-color: /* #D6EFFF */ #8d99ae;
+    width: 150px;
+}
   #infos {
     display: block;
     text-align: center;
