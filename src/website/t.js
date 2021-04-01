@@ -14,4 +14,6 @@ const d = new Date();
 console.log(d);
 const date = d.toString().split(' ');
 const currentDay = date[2];
+console.log(currentDay);
+console.log(typeof currentDay);
 console.log(date);

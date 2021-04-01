@@ -215,7 +215,6 @@ document.getElementById('weather-content').addEventListener('load', weatherDispl
 
 
 
-document.getElementById(currentDay).style.backgroundColor = "#98c1d9";
 
 caption.innerText = `${date[1]}  ${date[3]}`;
 
@@ -225,8 +224,8 @@ if(date[1] == 'Mar') {
   document.getElementById(currentDay).style.backgroundColor = "#98c1d9";
 }
 
-if(date[1] == 'Apri') {
-  document.getElementById('CalendarTable').innerHTML = year.April
+if(date[1] == 'Apr') {
+  document.getElementById('CalendarTable').innerHTML = year.Apri
   document.getElementById('caption').innerText = `${date[1]}  ${date[3]}`;
   document.getElementById(currentDay).style.backgroundColor = "#98c1d9";
 }

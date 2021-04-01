@@ -90,17 +90,17 @@ const April = `<table bgcolor="lightgrey" align="center" cellspacing="21" cellpa
         <td>29</td>
         <td>30</td>
         <td id="31">31</td>
-        <td id="1">1</td>
-        <td id="2">2</td>
-        <td id="3">3</td>
+        <td id="01">1</td>
+        <td id="02">2</td>
+        <td id="03">3</td>
     </tr>
     <tr>
-        <td id="4">4</td>
-        <td id="5">5</td>
-        <td id="6">6</td>
-        <td id="7">7</td>
-        <td id="8">8</td>
-        <td id="9">9</td>
+        <td id="04">4</td>
+        <td id="05">5</td>
+        <td id="06">6</td>
+        <td id="07">7</td>
+        <td id="08">8</td>
+        <td id="09">9</td>
         <td id="10">10</td>
     </tr>
     <tr>
