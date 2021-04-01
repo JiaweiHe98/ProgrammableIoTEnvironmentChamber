@@ -18,7 +18,6 @@ data.sensorData = {
     humidity: dataArray[0],
     temperature: dataArray[1],
     lightIntensity: dataArray[2],
-    windSpeed: dataArray[3],
 };
 data.userSetting = {
     lightIntensity: {

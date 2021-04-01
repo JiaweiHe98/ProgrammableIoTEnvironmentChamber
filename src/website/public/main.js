@@ -11,7 +11,6 @@ const sensorRefresher = document.getElementById("#sensorRefresher");
 const lastUpdate = document.getElementById("lupdate");
 const tempu = document.getElementById("tempu");
 const humidityu = document.getElementById("Humidityu");
-const windu = document.getElementById("windu")
 const light1u = document.getElementById("light1u");
 const light2u = document.getElementById("light2u");
 const light3u = document.getElementById("light3u");
@@ -35,7 +34,6 @@ const postSetting = async () => {
     userSetting: {
       temperature: tempu.value,
       humidity: humidityu.value,
-      windSpeed: windu.value,
       lightIntensity: {
         Aisles_1: light1u.value,
         Aisles_2: light2u.value,
@@ -311,7 +309,6 @@ const executeUserRefresh = () => {
   const light = ["30", "50", "70", "90"];
   tempu.value = temp[random_1];
   humidityu.value = humidity[random_2];
-  windu.value = wind[random_3];
   light1u.value = light[random_1];
   light2u.value = light[random_2];
   light3u.value = light[random_3];

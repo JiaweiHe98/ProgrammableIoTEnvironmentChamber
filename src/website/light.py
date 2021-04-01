@@ -1,7 +1,7 @@
 import serial
 import time
 
-Arduino = serial.Serial('/dev/cu.usbserial-141240', 115200)
+Arduino = serial.Serial('/dev/cu.usbserial-1412220', 115200)
 
 power_set = [1, 1, 1, 1]
 
