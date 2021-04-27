@@ -17,3 +17,6 @@ const currentDay = date[2];
 console.log(currentDay);
 console.log(typeof currentDay);
 console.log(date);
+
+const ts = [1,2,3];
+console.log(ts);
