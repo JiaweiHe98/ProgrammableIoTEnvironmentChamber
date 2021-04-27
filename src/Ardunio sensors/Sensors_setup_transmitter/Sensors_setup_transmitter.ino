@@ -23,7 +23,7 @@ float zerowindvolts = 1.46;
 
 //nRF
 RF24 radio(7,8);//CE, CSN
-const byte address[6] = "123456";
+const byte address[6] = "00001";
 
 void setup() {
   
