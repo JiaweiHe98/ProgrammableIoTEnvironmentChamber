@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/serial/serialposix.py", line 322, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/cu.usbserial-141240'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ge/Documents/GitHub/ProgrammableIoTEnvironmentChamber/src/website/relay.py", line 4, in <module>
+    Arduino = serial.Serial('/dev/cu.usbserial-141240', 115200)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/serial/serialutil.py", line 244, in __init__
+    self.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/serial/serialposix.py", line 325, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 2] could not open port /dev/cu.usbserial-141240: [Errno 2] No such file or directory: '/dev/cu.usbserial-141240'
