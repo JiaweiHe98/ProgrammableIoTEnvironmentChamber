@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="dashboard.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<title>Dashboard</title>
+	<script src="https://use.fontawesome.com/9683f032f9.js"></script>
+</head>
+
+<body style="background-color:#e9ecef">
+	<header>
+		<nav class="menucont">
+			<ul>
+				<li class="menu"><a href="#Sensorsval">Dashboard</a></li>
+				<li class="menu"><a href="https://www.pinterest.com/jojapiposa/plant-setup-concepts/" target="_blank">Plants Setup</a></li>
+				<li class="menu"><a href="https://www.saferbrand.com/articles/plant-growth-stages" target="_blank"> Growing Cycle</a></li>
+				<li class="menu"><a href="./report/report.html"> Reporting Tools</a></li>
+			</ul>
+			<img src="logo.png" alt="Logo Environmental Chamber" id="logo">
+		</nav>
+
+	</header>
+	<h1>Dashboard</h1>
+
+	<section id="infos">
+		<section id="Environmentalcond">
+			<h2>Weather</h2>
+			<div id="weather-wrapper">
+				<div id="weather-content">
+
+				</div>
+
+			</div>
+			<div class="Env">
+				<h2>Environmental Conditions</h2>
+			</div>
+
+			<div class="env">
+
+				<div id="Sensorsval">
+					<p class="tiltes"> Sensors readings <i class="fa-refresh fa" , id="#sensorRefresher"></i> </p>
+					<p id="lupdate" style="padding-top: 10px;"> </p>
+					<form id="Sensors">
+
+						<div>
+							<label class="flaticon-heat" for="temp">Temperature</label>
+							<input type="number" name="temperature" id="temperature"><span
+								style="margin-left:5px;">&#8457;</span>
+						</div>
+
+						<div>
+							<label class="flaticon-rain" for="Humidity">Humidity</label>
+							<input type="number" name="Humidity" id="Humidity"><span style="margin-left:5px;">%</span>
+						</div>
+						<div>
+							<label class="flaticon-wind" for="wind">Wind Speed</label>
+							<input type="number" name="wind" id="wind"><span style="margin-left:5px;">mph</span>
+						</div>
+
+						
+
+						<div class="lightss">
+							<div>
+								<label for="light">Light Intensity</label>
+								<input type="number" name="light1" id="light1"><span style="margin-left:5px;">lux</span>
+							</div>
+
+						</div>
+
+					</form>
+				</div>
+				<div id="userval">
+					<p class="tiltes" style="padding-top: 5px;"> User's Settings <i class="fa fa-refresh"
+							aria-hidden="true" id="userRefresher"></i> <i class="fa fa-pencil" id="userPost"></i>
+					</p>
+					<form>
+						<div><label class="flaticon-heat" for="tempu" id="tempulabel">Temperature </label>
+							<input type="number" name="temperature" id="tempu" value="32"><span
+								style="margin-left:5px;">&#8457;</span>
+						</div>
+
+
+						<div><label class="flaticon-rain" for="Humidityu">Humidity</label>
+							<input type="number" name="Humidity" id="Humidityu" value="70"><span
+								style="margin-left:5px;">%</span>
+						</div>
+						<div>
+							<div class="wind-wrapper" style="display: flex;">
+								<div class="fan-wrapper">
+									<label for="windButton">Fan Switch_1</label>
+								</div>
+								<div class="fan-wrapper" id="fanWrapper2">
+									<label for="windButton">Fan Switch_2</label>
+								</div>
+								<div id="switch1-wrapper">
+									<input type="button" value="off" id="fanSwitch1" style="background-color: #e63946;">
+								</div>
+								<div id="switch2-wrapper">
+									<input type="button" value="off" id="fanSwitch2" style="background-color: #e63946;">
+								</div>
+							</div>
+						</div>
+
+						<p class="tiltes lighttitle flaticon-sun"> Light Intensity </p>
+
+						<div class="lightss">
+							<div>
+								<label for="light1u">Aisles 1</label>
+								<input type="number" name="light1" id="light1u" value="20"><span
+									style="margin-left:5px;">%</span>
+
+							</div>
+							<div>
+								<label for="light2u">Aisles 2</label>
+								<input type="number" name="lighT2" id="light2u" value="30"><span
+									style="margin-left:5px;">%</span>
+							</div>
+							<div>
+								<label for="light3u">Aisles 3</label>
+								<input type="number" name="lighT3" id="light3u" value="45"><span
+									style="margin-left:5px;">%</span>
+							</div>
+							<div>
+								<label for="light4u">Aisles 4</label>
+								<input type="number" name="lighT4" id="light4u" value="80"><span
+									style="margin-left:5px;">%</span>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="lefthands">
+			<h2 class="growcycletitle">Growing Cycle</h2>
+			<section id="runningcycle">
+
+				<div id="runningcyclecont">
+					<div class="title" id="cycleinf">
+						<p class="title">Cycle: Default</p>
+						</br>
+						<p> Start Date: 04/16/2021</p>
+						</br>
+						<p> End Date: 05/16/2021</p>
+						</br>
+						<p>Current Growing Scheme: Default </p>
+					</div>
+					<div id="schemeinf">
+						<p class="title"> Next Settings: </p>
+						</br>
+						<p> <span class="flaticon-heat"> 20F </span><span class="flaticon-rain"> 70% </span><span
+								class="flaticon-wind"> 2mph</span></p>
+						</br>
+						<p><span class="flaticon-sun"> A1: 200 lux </span><span class="flaticon-sun"> A2: 300 lux
+							</span></p>
+						</br>
+						<p> Start on: 04/24/2021 at 5:30 PM EST</p>
+					</div>
+
+				</div>
+				<div class="button-rcycle">
+					<p class="button-r">More </p>
+				</div>
+			</section>
+
+			<h2 class="grw">Growth Cycle Schedule</h2>
+			<section id="executionschedule">
+				<div class="calendar">
+					<div id="CalendarTable">
+						<table bgcolor="lightgrey" align="center" cellspacing="21" cellpadding="21">
+						<caption align="top" id="caption">
+						</caption>
+						<thead>
+							<th>S</th>
+							<th>M</th>
+							<th>T</th>
+							<th>W</th>
+							<th>R</th>
+							<th>F</th>
+							<th>S</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td id='1'>1</td>
+								<td id='2'>2</td>
+							</tr>
+							<tr>
+								<td id='3'>3</td>
+								<td id='4'>4</td>
+								<td id='5'>5</td>
+								<td id='6'>6</td>
+								<td id='7'>7</td>
+								<td id='8'>8</td>
+								<td id='9'>9</td>
+							</tr>
+							<tr>
+								<td id='10'>10</td>
+								<td id='11'>11</td>
+								<td id='12'>12</td>
+								<td id='13'>13</td>
+								<td id='14'>14</td>
+								<td id='15'>15</td>
+								<td id='16'>16</td>
+							</tr>
+							<tr>
+								<td class="scheduled" id='17'>17</td>
+								<td id='18'>18</td>
+								<td class="scheduled" id="19">19</td>
+								<td class="scheduled" id="20">20</td>
+								<td id="21">21</td>
+								<td id="22">22</td>
+								<td id="23">23</td>
+							</tr>
+							<tr>
+								<td id="24">24</td>
+								<td id="25">25</td>
+								<td class="scheduled" id="26">26</td>
+								<td class="scheduled" id="27">27</td>
+								<td id="28">28</td>
+								<td id="29">29</td>
+								<td id="30">30</td>
+							</tr>
+							<tr>
+								<td id="31">31</td>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					
+					<div id="growCycle">
+						<p id="schm-title"> Cycle: Default</p>
+						<div>
+							<p> Scheme 1</p>
+							<span class="flaticon-heat"> 50 F</span> <span class="flaticon-rain">80%</span> <span
+								class="flaticon-wind"></span> 5 Mph
+							</br>
+							<span class="flaticon-sun">A1: 200 lux; A2:400 lux</span>
+						</div>
+						</br>
+						<div>
+							<p> Scheme 2</p>
+							<span class="flaticon-heat"> 50 F</span> <span class="flaticon-rain">80%</span> <span
+								class="flaticon-wind"></span> 5 Mph
+							</br>
+							<span class="flaticon-sun">A1: 200 lux; A2:400 lux</span>
+						</div>
+						<div class="button-rcycle">
+							<p class="button-r">More </p>
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+
+		</section>
+	</section>
+	<script src="Month.js"></script>
+	<script src="main.js"></script>
+	<footer>
+
+	</footer>
+
+</body>
+
+</html>
