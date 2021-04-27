@@ -3,7 +3,7 @@
 #include <RF24.h>
 
 RF24 radio(7,8);
-//Four channel for transmitters
+//Four channels for transmitters
 const byte address[6] = "00001"; 
 const byte address1[6] = "00002"; 
 const byte address2[6] = "00003"; 
